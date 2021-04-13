@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS "user",
 "promo",
 "order";
 
-CREATE TABLE IF NOT EXISTS "user" (
+ CREATE TABLE "user" (
     "id" serial PRIMARY KEY,
     "email" varchar NOT NULL,
     "password" varchar NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS "user" (
     "vegan" boolean
 );
 
-CREATE TABLE IF NOT EXISTS "promo" (
+CREATE TABLE "promo" (
     "id" serial PRIMARY KEY,
     "code" varchar NOT NULL,
     "start_date" date NOT NULL,
@@ -30,12 +30,14 @@ CREATE TABLE IF NOT EXISTS "promo" (
     "pourcent" integer NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS "order" (
+CREATE TABLE "order" (
     "id" serial PRIMARY KEY,
     "start_subscribe" date NOT NULL,
     "end_subscribe" date NOT NULL,
     "amount" integer NOT NULL,
-    "points" integer NOT NULL
+    "points" integer NOT NULL,
+    "user_id" integer NOT NULL REFERENCES "user" ("id"),
+    "promo_id" integer REFERENCES "promo" ("id")
 );
 
 COMMIT;
