@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config();
 const express = require('express');
 const app = express();
 const data = require ('./base.json')
@@ -13,4 +14,4 @@ app.use((req,res) =>{
     console.log('data:', data)
 })
 
-app.listen(3000, console.log('App open on Port:3000'));
+app.listen(process.env.PORT, console.log(`App open on Port:${process.env.PORT}`));
