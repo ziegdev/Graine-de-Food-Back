@@ -10,7 +10,7 @@ app.use(cors({
 
 app.use((req,res) =>{
     res.json(data);
-    console.log(data);
+    console.log('data:', data)
 })
 
 app.listen(3000, console.log('App open on Port:3000'));
