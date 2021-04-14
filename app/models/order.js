@@ -4,11 +4,11 @@ const sequelize = require('../database');
 class Order extends Model {};
 
 Order.init({
-    startSubscribe: {
-        type: DataTypes.VARCHAR,
+    start_subscribe: {
+        type: DataTypes.STRING,
         allowNull: false
     },
-    endSubscribe: {
+    end_subscribe: {
         type: DataTypes.DATE,
         allowNull: false
     },
@@ -21,7 +21,7 @@ Order.init({
         allowNull: false
     }, 
 }, {
-        sequilize,
+        sequelize,
         tableName:"order",
         timestamps:true
     

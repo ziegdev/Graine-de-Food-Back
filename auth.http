@@ -1,0 +1,17 @@
+### test login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+"email": "pipo@test.fr",
+"password": "1234"
+}
+
+
+### Get Users
+
+GET http://localhost:3000/login
+
+### Get Users
+
+GET http://localhost:3000/promos
