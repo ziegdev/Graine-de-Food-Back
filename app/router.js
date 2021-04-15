@@ -8,6 +8,7 @@ router.post('/login', signupController.login);
 //router.post('/signup', signupController.signup);
 
 router.get('/promos', promoController.promos);
+router.post('/promo', promoController.createPromo);
 
 module.exports = router;
 

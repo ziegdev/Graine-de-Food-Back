@@ -12,6 +12,19 @@ Content-Type: application/json
 
 GET http://localhost:3000/login
 
-### Get Users
+### Get Promos
 
 GET http://localhost:3000/promos
+
+
+### ADD PROMOS
+
+POST http://localhost:3000/promo
+Content-Type: application/json
+
+{
+    "code":"test2",
+    "start_date":"2021-04-15",
+    "end_date":"2021-06-15",
+    "pourcent" : 10
+}
