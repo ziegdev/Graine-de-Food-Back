@@ -16,6 +16,7 @@ DROP TABLE IF EXISTS "user",
     "invoice_postcode" integer NOT NULL,
     "delivery_city" varchar NOT NULL,
     "invoice_city" varchar NOT NULL,
+
     "status" boolean,
     "points" integer,
     "role" varchar NOT NULL,
