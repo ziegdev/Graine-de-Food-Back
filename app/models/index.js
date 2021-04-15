@@ -22,4 +22,4 @@ Order.belongsTo(Promo, {
     as: "promo"
 });
 
-module.exports = { User, Order, Promo };
+module.exports = {User, Order, Promo};

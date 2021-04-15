@@ -1,18 +1,18 @@
-const { DataTypes, Model} = require('sequelize');
+const { DataTypes, Model } = require('sequelize');
 const sequelize = require('../database');
 
 class Promo extends Model {};
 
 Promo.init({
     code: {
-        type: DataTypes.VARCHAR,
+        type: DataTypes.STRING,
         allowNull: false
     },
-    startDate: {
+    start_date: {
         type: DataTypes.DATE,
         allowNull: false
     },
-    endDate: {
+    end_date: {
         type: DataTypes.DATE,
         allowNull: false
     },
@@ -21,8 +21,8 @@ Promo.init({
         allowNull: false
     },
 }, {
-    sequilize,
-    tableName:"Promo",
+    sequelize,
+    tableName:"promo",
 });
 
 module.exports = Promo;

@@ -1,47 +1,47 @@
-const { DataTypes, Model} = require('sequelize');
+const { DataTypes, Model } = require('sequelize');
 const sequelize = require('../database');
 
 class User extends Model {};
 
 User.init({
     email: {
-        type: DataTypes.VARCHAR,
+        type: DataTypes.STRING,
         allowNull: false
     },
     password: {
-        type: DataTypes.VARCHAR,
+        type: DataTypes.STRING,
         allowNull: false
     },
-    lastName: {
-        type: DataTypes.VARCHAR,
+    last_name: {
+        type: DataTypes.STRING,
         allowNull: false
     },
-    firstName: {
-        type: DataTypes.VARCHAR,
+    first_name: {
+        type: DataTypes.STRING,
         allowNull: false
     },
-    deliveryAddress: {
-        type: DataTypes.VARCHAR,
+    delivery_address: {
+        type: DataTypes.STRING,
         allowNull: false
     },
-    invoiceAddress: {
-        type: DataTypes.VARCHAR,
+    invoice_address: {
+        type: DataTypes.STRING,
         allowNull: false
     },
-    deliveryPostCode: {
+    delivery_postcode: {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    invoicePostCode: {
+    invoice_postcode: {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    deliveryCity: {
-        type: DataTypes.VARCHAR,
+    delivery_city: {
+        type: DataTypes.STRING,
         allowNull: false
     },
-    invoiceCity: {
-        type: DataTypes.VARCHAR,
+    invoice_city: {
+        type: DataTypes.STRING,
         allowNull: false
     },
     status: {
@@ -55,7 +55,7 @@ User.init({
         defaultValue: 0
     },
     role: {
-        type: DataTypes.VARCHAR,
+        type: DataTypes.STRING,
         allowNull: false,
         defaultValue: "USER"
     },
@@ -65,9 +65,9 @@ User.init({
         defaultValue: false
     },
 }, {
-    sequilize,
-    tableName:"User",
-    timestamps:true
+    sequelize,
+    tableName:"user",
+    //timestamps:true,
 });
 
 module.exports = User;

@@ -4,11 +4,11 @@ const sequelize = require('../database');
 class Order extends Model {};
 
 Order.init({
-    startSubscribe: {
-        type: DataTypes.VARCHAR,
+    start_subscribe: {
+        type: DataTypes.STRING,
         allowNull: false
     },
-    endSubscribe: {
+    end_subscribe: {
         type: DataTypes.DATE,
         allowNull: false
     },
@@ -19,12 +19,20 @@ Order.init({
     points: {
         type: DataTypes.INTEGER,
         allowNull: false
-    }, 
+    },
+    created_at: {
+        type: DataTypes.DATE,
+        allowNull: false
+    },
+    updated_at: {
+        type: DataTypes.DATE,
+        allowNull: false
+    },
+
 }, {
-        sequilize,
-        tableName:"order",
-        timestamps:true
-    
+        sequelize,
+        tableName:"order", 
+        timestamps:true  
 });
 
 module.exports = Order;
