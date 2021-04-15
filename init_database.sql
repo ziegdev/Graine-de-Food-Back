@@ -16,6 +16,7 @@ DROP TABLE IF EXISTS "user",
     "invoice_postcode" integer NOT NULL,
     "delivery_city" varchar NOT NULL,
     "invoice_city" varchar NOT NULL,
+
     "status" boolean,
     "points" integer,
     "role" varchar NOT NULL,
@@ -37,7 +38,9 @@ CREATE TABLE "order" (
     "amount" integer NOT NULL,
     "points" integer NOT NULL,
     "user_id" integer NOT NULL REFERENCES "user" ("id"),
-    "promo_id" integer REFERENCES "promo" ("id")
+    "promo_id" integer REFERENCES "promo" ("id"),
+    "created_at" TIMESTAMP NOT NULL DEFAULT NOW(),
+    "updated_at" TIMESTAMP
 );
 
 COMMIT;
