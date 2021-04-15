@@ -37,7 +37,9 @@ CREATE TABLE "order" (
     "amount" integer NOT NULL,
     "points" integer NOT NULL,
     "user_id" integer NOT NULL REFERENCES "user" ("id"),
-    "promo_id" integer REFERENCES "promo" ("id")
+    "promo_id" integer REFERENCES "promo" ("id"),
+    "created_at" TIMESTAMP NOT NULL DEFAULT NOW(),
+    "updated_at" TIMESTAMP
 );
 
 COMMIT;
