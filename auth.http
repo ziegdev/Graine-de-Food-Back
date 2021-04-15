@@ -23,8 +23,27 @@ POST http://localhost:3000/promo
 Content-Type: application/json
 
 {
-    "code":"test2",
+    "code":"test3",
     "start_date":"2021-04-15",
     "end_date":"2021-06-15",
     "pourcent" : 10
 }
+
+### GET PROMOS BY CODE
+
+GET http://localhost:3000/promo/pascher33
+
+
+### MODIFY PROMO
+PUT http://localhost:3000/promo/pascher
+Content-Type: application/json
+
+{
+    "code":"pascher33",
+    "start_date":"2021-04-15",
+    "end_date":"2021-06-15",
+    "pourcent" : 80
+}
+
+### DELETE PROMO
+DELETE http://localhost:3000/promo/pascher33

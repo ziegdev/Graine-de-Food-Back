@@ -9,6 +9,9 @@ router.post('/login', signupController.login);
 
 router.get('/promos', promoController.promos);
 router.post('/promo', promoController.createPromo);
+router.get('/promo/:code', promoController.getPromoByCode);
+router.put('/promo/:code', promoController.updatePromo);
+router.delete('/promo/:code', promoController.deletePromo);
 
 module.exports = router;
 
