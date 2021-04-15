@@ -84,7 +84,6 @@ const promoController = {
         },
     deletePromo: (req,res) => {
         const codename = req.params.code;
-        console.log(codename);
         Promo.findOne({ 
             where: { 
                 code: codename,

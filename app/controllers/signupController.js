@@ -17,6 +17,19 @@ const signupController = {
         })
         console.log(req.body);
         
+    }, 
+    signup: (req, res) => {
+        const signupData = req.body;
+        User.create(signupData)
+        .then((user) => res.json({
+            success: true,
+            user
+        })).catch (error => {
+            res.sendStatus(500).json({
+                success: false,
+                error: error.message
+            })
+        })
     }
 };
 

@@ -47,3 +47,38 @@ Content-Type: application/json
 
 ### DELETE PROMO
 DELETE http://localhost:3000/promo/pascher33
+
+### Get Users
+
+GET http://localhost:3000/users
+
+### Get User By Id
+
+GET http://localhost:3000/user/1
+
+
+### MODIFY USER
+PUT http://localhost:3000/user/1
+Content-Type: application/json
+
+{
+    "id": 2,
+    "email": "pipo@test.fr",
+    "password": "1234",
+    "last_name": "Dupont",
+    "first_name": "PIPOPRENOM",
+    "delivery_address": "5 rue Republique",
+    "invoice_address": "6 rue République",
+    "delivery_postcode": 11100,
+    "invoice_postcode": 74000,
+    "delivery_city": "NARBONNE",
+    "invoice_city": "VERSAILLES",
+    "status": true,
+    "points": 1,
+    "role": "user",
+    "vegan": true
+}
+
+
+### DELETE User
+DELETE http://localhost:3000/user/2
