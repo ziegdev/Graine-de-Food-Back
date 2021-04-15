@@ -19,12 +19,20 @@ Order.init({
     points: {
         type: DataTypes.INTEGER,
         allowNull: false
-    }, 
+    },
+    created_at: {
+        type: DataTypes.DATE,
+        allowNull: false
+    },
+    updated_at: {
+        type: DataTypes.DATE,
+        allowNull: false
+    },
+
 }, {
         sequelize,
-        tableName:"order",
-        timestamps:true
-    
+        tableName:"order", 
+        timestamps:true  
 });
 
 module.exports = Order;

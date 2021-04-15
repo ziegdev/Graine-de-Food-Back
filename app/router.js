@@ -3,12 +3,16 @@ const router = express.Router();
 
 const signupController = require('./controllers/signupController');
 const promoController = require ('./controllers/promoController');
+const orderController = require('./controllers/orderController');
 const userController = require('./controllers/userController');
+
 
 router.post('/login', signupController.login);
 //router.post('/signup', signupController.signup);
 
 router.get('/promos', promoController.promos);
+router.get('/orders', orderController.getOrders);
+router.post('/order', orderController.createOrder);
 router.post('/promo', promoController.createPromo);
 router.get('/promo/:code', promoController.getPromoByCode);
 router.put('/promo/:code', promoController.updatePromo);

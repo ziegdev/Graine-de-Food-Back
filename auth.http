@@ -50,6 +50,27 @@ DELETE http://localhost:3000/promo/pascher33
 
 ### Get Users
 
+
+GET http://localhost:3000/promos
+
+### Get orders
+
+GET http://localhost:3000/orders
+
+### Create orders
+
+POST http://localhost:3000/order
+Content-Type: application/json
+
+{
+    "start_subscribe": "2021-04-15",
+    "end_subscribe": "2021-05-15",
+    "amount": 29,
+    "points": 1,
+    "user_id" : 1
+    
+}
+
 GET http://localhost:3000/users
 
 ### Get User By Id
@@ -82,3 +103,4 @@ Content-Type: application/json
 
 ### DELETE User
 DELETE http://localhost:3000/user/2
+
