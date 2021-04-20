@@ -11,11 +11,16 @@ const signupController = {
             } 
         }).then((user) => {
         if (!user) {
-            throw new Error ('Try again dude')
+        res.sendStatus(500).json({
+                success: false,
+                error: error.message
+            })
             }
-        return (console.log('OKayyy:'))
+        res.json({
+                    success: true,
+                    user
+                });
         })
-        console.log(req.body);
         
     }, 
     signup: (req, res) => {
