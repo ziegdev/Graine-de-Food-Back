@@ -11,7 +11,7 @@ const signupController = {
             } 
         }).then((user) => {
         if (!user) {
-        res.sendStatus(500).json({
+        res.sendStatus(401).json({
                 success: false,
                 error: error.message
             })
