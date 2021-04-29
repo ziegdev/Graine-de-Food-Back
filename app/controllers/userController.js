@@ -3,7 +3,9 @@ const { User } = require('../models');
 
 const userController = {
     getAllUsers: (req,res) => {
-        User.findAll(). then( users => {
+        User.findAll({
+            include: ['orders']
+        }). then( users => {
    
                 if(!users) {
                     throw new Error("Users not found");
@@ -23,7 +25,9 @@ const userController = {
 
     getUserById: (req,res) => {
         const userId = req.params.id;
-        User.findByPk(userId). then( user => {
+        User.findByPk(userId, {
+                include: ['orders']
+            }). then( user => {
                
             if(!user) {
                 throw new Error("User not found");
