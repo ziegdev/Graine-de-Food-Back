@@ -104,17 +104,14 @@ Content-Type: application/json
 ### DELETE User
 DELETE http://localhost:3000/user/2
 
-
-### CREATE User
-POST http://localhost:3000//signup
+POST http://localhost:3000/signup
 Content-Type: application/json
 
 {
-    "id": 2,
-    "email": "pipo@test.fr",
-    "password": "1234",
+    "email": "popi@test.fr",
+    "password": "5678",
     "last_name": "Dupont",
-    "first_name": "PIPOPRENOM",
+    "first_name": "PRENOM DE MERDE",
     "delivery_address": "5 rue Republique",
     "invoice_address": "6 rue République",
     "delivery_postcode": 11100,
