@@ -25,5 +25,8 @@ router.delete('/user/:id', userController.deleteUser);
 
 router.post('/signup', signupController.signup);
 
+// Payement
+// router.post('/getpayement', payementController.payement);
+
 module.exports = router;
 
