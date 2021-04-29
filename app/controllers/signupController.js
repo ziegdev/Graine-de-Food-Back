@@ -8,7 +8,9 @@ const signupController = {
             where: { 
                 email: email,
                 password: password 
-            } 
+            }, include: [
+                'orders'
+            ] 
         }).then((user) => {
        res.json({
                 success: true,
