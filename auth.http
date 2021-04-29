@@ -23,10 +23,10 @@ POST http://localhost:3000/promo
 Content-Type: application/json
 
 {
-    "code":"test3",
-    "start_date":"2021-04-15",
-    "end_date":"2021-06-15",
-    "pourcent" : 10
+    code: 'CODETEST',
+    pourcent: '55',
+    start_date: '2021-01-30',
+    end_date: '2021-02-02'
 }
 
 ### GET PROMOS BY CODE
@@ -103,4 +103,27 @@ Content-Type: application/json
 
 ### DELETE User
 DELETE http://localhost:3000/user/2
+
+
+### CREATE User
+POST http://localhost:3000//signup
+Content-Type: application/json
+
+{
+    "id": 2,
+    "email": "pipo@test.fr",
+    "password": "1234",
+    "last_name": "Dupont",
+    "first_name": "PIPOPRENOM",
+    "delivery_address": "5 rue Republique",
+    "invoice_address": "6 rue République",
+    "delivery_postcode": 11100,
+    "invoice_postcode": 74000,
+    "delivery_city": "NARBONNE",
+    "invoice_city": "VERSAILLES",
+    "status": true,
+    "points": 1,
+    "role": "user",
+    "vegan": true
+}
 
