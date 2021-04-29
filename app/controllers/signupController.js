@@ -10,16 +10,15 @@ const signupController = {
                 password: password 
             } 
         }).then((user) => {
-        if (!user) {
-        res.sendStatus(401).json({
+       res.json({
+                success: true,
+                user
+                 });
+        }) .catch (error => {
+            res.json({
                 success: false,
                 error: error.message
             })
-            }
-        res.json({
-                    success: true,
-                    user
-                });
         })
         
     }, 
