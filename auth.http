@@ -23,15 +23,15 @@ POST http://localhost:3000/promo
 Content-Type: application/json
 
 {
-    "code":"test3",
-    "start_date":"2021-04-15",
-    "end_date":"2021-06-15",
-    "pourcent" : 10
+    code: 'CODETEST',
+    pourcent: '55',
+    start_date: '2021-01-30',
+    end_date: '2021-02-02'
 }
 
 ### GET PROMOS BY CODE
 
-GET http://localhost:3000/promo/pascher33
+GET http://localhost:3000/promo/pas
 
 
 ### MODIFY PROMO
