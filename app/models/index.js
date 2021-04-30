@@ -4,12 +4,17 @@ const Order = require('./order');
 
 User.hasMany(Order, {
     foreignKey: "user_id",
-    as: "orders"
-
+    as: "orders",
+    onDelete: 'cascade', 
+    hooks: true,
+    
 });
 Order.belongsTo(User, {
     foreignKey: "user_id",
-    as: "user"
+    as: "user",
+    //onDelete: 'cascade', 
+    //hooks: true,
+    //foreignKey: { allowNull: false },
 });
 
 Promo.hasMany(Order, {
